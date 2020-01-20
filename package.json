@@ -5,6 +5,8 @@
   "homepage": "http://kalkulatory.matjanko.usermd.net/",
   "proxy": "http://localhost:8090",
   "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/styles": "^4.8.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
