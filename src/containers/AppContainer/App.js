@@ -5,6 +5,7 @@ import theme from '../../styles/theme'
 import HeaderContainer from '../HeaderContainer/HeaderContainer';
 import FooterContainer from '../FooterContainer/FooterContainer';
 import { ThemeProvider } from '@material-ui/core/styles';
+import PageContainer from '../PageContainer/PageContainer';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <div className="App">
         <HeaderContainer/>
         <div className="App-main">
-
+          <PageContainer/>
         </div>
         <FooterContainer/>
       </div>
