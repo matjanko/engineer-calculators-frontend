@@ -1,10 +1,12 @@
 import React from 'react'
+import CalculatorsList from '../../components/CalculatorsList'
+import calculators from '../../constants/calculators'
 
 function HomePage() {
 
     return (
         <div>
-            Strona główna
+            <CalculatorsList calculators={calculators}/>
         </div>
     )
 }
