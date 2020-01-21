@@ -1,14 +1,21 @@
 import React from 'react'
-import StyledAppBar from '../../components/StyledAppBar';
-
+import { AppBar, Toolbar, Grid, Typography } from '@material-ui/core'
 
 function HeaderContainer() {
 
-    const headerTitle = 'KALKULATORY';
+    const title = 'KALKULATORY';
 
     return (
         <div>
-            <StyledAppBar title={headerTitle}/>
+            <AppBar position="fixed">
+                <Toolbar>
+                    <Grid justify="center" container>
+                        <Typography variant="h6" noWrap>
+                            {title}
+                        </Typography>
+                    </Grid>
+                </Toolbar>
+            </AppBar>
         </div>
     )
 }
