@@ -1,4 +1,4 @@
-const calculators = [
+const spreadsheets = [
     {
         name: 'Żelbet',
         sheets: [
@@ -35,4 +35,4 @@ const calculators = [
     }
 ]
 
-export default calculators;
+export default spreadsheets;

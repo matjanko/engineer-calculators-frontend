@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CalculatorsList({calculators}) {
+export default function SpreadsheetsList({spreadsheets}) {
 
     return (
         <div>

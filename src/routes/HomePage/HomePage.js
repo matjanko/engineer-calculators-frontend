@@ -1,12 +1,12 @@
 import React from 'react'
-import CalculatorsList from '../../components/CalculatorsList'
-import calculators from '../../constants/calculators'
+import spreadsheets from '../../constants/spreadsheets'
+import SpreadsheetsList from '../../components/SpreadsheetsList/SpreadsheetsList';
 
 function HomePage() {
 
     return (
         <div>
-            <CalculatorsList calculators={calculators}/>
+            <SpreadsheetsList spreadsheets={spreadsheets}/>
         </div>
     )
 }
