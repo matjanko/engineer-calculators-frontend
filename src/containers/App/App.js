@@ -2,21 +2,21 @@ import React from 'react';
 
 import './App.css';
 import theme from '../../styles/theme'
-import HeaderContainer from '../HeaderContainer/HeaderContainer';
-import FooterContainer from '../FooterContainer/FooterContainer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import { ThemeProvider } from '@material-ui/core/styles';
-import PageContainer from '../PageContainer/PageContainer';
+import Main from '../Main/Main';
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <HeaderContainer/>
+        <Header/>
         <div className="App-main">
-          <PageContainer/>
+          <Main/>
         </div>
-        <FooterContainer/>
+        <Footer/>
       </div>
     </ThemeProvider>
   );

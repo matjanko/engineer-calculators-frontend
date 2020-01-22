@@ -1,7 +1,7 @@
 import React from 'react'
 import StyledFooter from '../../components/StyledFooter';
 
-function FooterContainer() {
+function Footer() {
 
     const text = '2020 matjanko - Wszelkie prawa zastrzeżone';
 
@@ -12,4 +12,4 @@ function FooterContainer() {
     )
 }
 
-export default FooterContainer;
+export default Footer;

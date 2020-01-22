@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Container } from "@material-ui/core";
 import { HomePage, CoverPage, ErrorPage } from '../../routes'
 
-function PageContainer() {
+function Main() {
 
     return (
         <div>
@@ -20,4 +20,4 @@ function PageContainer() {
     )
 }
 
-export default PageContainer;
+export default Main;

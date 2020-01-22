@@ -1,7 +1,7 @@
 import React from 'react'
 import { AppBar, Toolbar, Grid, Typography } from '@material-ui/core'
 
-function HeaderContainer() {
+function Header() {
 
     const title = 'KALKULATORY';
 
@@ -20,4 +20,4 @@ function HeaderContainer() {
     )
 }
 
-export default HeaderContainer;
+export default Header;
