@@ -1,7 +1,7 @@
 import React from 'react'
 import './SpreadsheetsList.css'
 import { Grid } from '@material-ui/core'
-import SpreadsheetsCategory from './SpreadsheetsCategory'
+import SpreadsheetsCategory from '../SpreadsheetsCategory'
 
 export default function SpreadsheetsList({spreadsheets}) {
 

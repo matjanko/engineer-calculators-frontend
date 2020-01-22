@@ -1,0 +1,38 @@
+.tile {
+    font-size: 14px;
+    min-height: 120px;
+    padding: 10px;
+}
+
+.tile-body {
+    min-height: 120px;
+}
+
+.tile-body-icon {
+    margin: 5px;
+}
+
+.tile-body-link {
+    text-decoration: none;
+    color: darkblue;
+    font-weight: 600;
+}
+
+.tile-body-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tile-body-description {
+    margin-top: 5px;
+    margin-left: 7px;
+    overflow: hidden;
+}
+
+.tile-footer {
+    margin-top: 5px;
+    margin-left: 7px;
+    overflow: hidden;
+}
+
+
