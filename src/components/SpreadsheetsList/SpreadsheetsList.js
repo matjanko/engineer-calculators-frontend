@@ -1,7 +1,7 @@
 import React from 'react'
 import './SpreadsheetsList.css'
 import { Grid } from '@material-ui/core'
-import SpreadsheetsBox from '../SpreadsheetsBox'
+import SpreadsheetsCategoryBox from '../SpreadsheetsCategoryBox'
 
 export default function SpreadsheetsList({spreadsheets}) {
 
@@ -10,7 +10,7 @@ export default function SpreadsheetsList({spreadsheets}) {
             <Grid container spacing={5}>
                 {spreadsheets.map(spreadsheet => (
                     <Grid item xs={12} key={spreadsheet.name}>
-                        <SpreadsheetsBox name={spreadsheet.name} spreadsheets={spreadsheet.sheets}/>
+                        <SpreadsheetsCategoryBox name={spreadsheet.name} spreadsheets={spreadsheet.sheets}/>
                     </Grid>
                 ))}
             </Grid>
