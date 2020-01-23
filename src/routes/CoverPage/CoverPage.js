@@ -1,11 +1,10 @@
 import React from 'react'
+import CoverSpreadsheet from "../../containers/Spreadsheets/CoverSpreadsheet";
 
 function CoverPage() {
 
     return (
-        <div>
-            Otulina
-        </div>
+        <CoverSpreadsheet/>
     )
 }
 
