@@ -1,11 +1,11 @@
 import React from 'react'
-import './SpreadsheetsCategory.css'
+import './SpreadsheetsBox.css'
 import { Grid } from '@material-ui/core'
 import SpreadsheetTile from "../SpreadsheetTile";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 
-export default function SpreadsheetsCategory({name, spreadsheets}) {
+export default function SpreadsheetsBox({name, spreadsheets}) {
 
     return (
         <div>
