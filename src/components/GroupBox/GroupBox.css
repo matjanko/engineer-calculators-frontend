@@ -1,0 +1,17 @@
+.group-box {
+    font-size: 14px;
+    margin: 20px 10px 10px;
+}
+
+.group-box .header {
+    background-color: white;
+    margin-left: 15px;
+    margin-top: -10px;
+    display: table;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+.group-box .content {
+    margin: 20px;
+}
