@@ -33,6 +33,6 @@ const spreadsheets = [
             }
         ]
     }
-]
+];
 
 export default spreadsheets;
