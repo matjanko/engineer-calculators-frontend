@@ -9,7 +9,7 @@ export default function SpreadsheetsList({spreadsheets}) {
         <div className="root">
             <Grid container spacing={5}>
                 {spreadsheets.map(spreadsheet => (
-                    <Grid item xs={12}>
+                    <Grid item xs={12} key={spreadsheet.name}>
                         <SpreadsheetsBox name={spreadsheet.name} spreadsheets={spreadsheet.sheets}/>
                     </Grid>
                 ))}
