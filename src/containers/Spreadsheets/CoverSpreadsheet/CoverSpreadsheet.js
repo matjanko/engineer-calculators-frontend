@@ -2,6 +2,8 @@ import React, {useEffect} from "react";
 import Spreadsheet from "../../../components/Spreadsheet/Spreadsheet";
 import Grid from "@material-ui/core/Grid";
 import MaterialGroupBox from "./MaterialGroupBox";
+import Button from "@material-ui/core/Button";
+import {Box} from "@material-ui/core";
 
 
 const CoverSpreadsheet = () => {
@@ -23,8 +25,12 @@ const CoverSpreadsheet = () => {
 
     }, []);
 
-    const handleConcreteOnChange = event => {
+    const handleConcreteOnChange = (event) => {
         setSelectedConcrete(event.target.value)
+    };
+
+    const handleOnClickButton = () => {
+        alert("Wybrano" + selectedConcrete)
     };
 
     return (
@@ -39,6 +45,10 @@ const CoverSpreadsheet = () => {
 
                 </Grid>
             </Grid>
+            <Box component="span" xs={12} md={12} lg={12}>
+                <Button onClick={handleOnClickButton}>Oblicz</Button>
+            </Box>
+
         </Spreadsheet>
     )
 };
