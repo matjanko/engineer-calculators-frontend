@@ -10,9 +10,15 @@ export default createMuiTheme({
            }
        },
        MuiSelect: {
-           select: {
-               minWidth: '100px'
+           root: {
+               fontSize: 14,
+               backgroundColor: '#f5f5f5',
+               paddingLeft: 10
            }
+           ,
+           select: {
+               minWidth: '100px',
+           },
        }
    } 
 });
