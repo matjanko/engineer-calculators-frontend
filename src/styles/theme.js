@@ -19,6 +19,11 @@ export default createMuiTheme({
            select: {
                minWidth: '100px',
            },
-       }
+       },
+        MuiInput: {
+           root: {
+               fontSize: 14,
+           }
+        },
    } 
 });
