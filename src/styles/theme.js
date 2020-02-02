@@ -12,8 +12,8 @@ export default createMuiTheme({
        MuiSelect: {
            root: {
                fontSize: 14,
-               backgroundColor: '#f5f5f5',
-               paddingLeft: 10
+               backgroundColor: 'rgb(240, 241, 249)',
+               paddingLeft: 10,
            }
            ,
            select: {

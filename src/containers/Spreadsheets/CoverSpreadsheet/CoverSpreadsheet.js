@@ -5,6 +5,10 @@ import Button from "@material-ui/core/Button";
 import {Box} from "@material-ui/core";
 import SpreadsheetPage from "../../../components/SpreadsheetPage";
 import SpreadsheetProgress from "../../../components/SpreadsheetProgress";
+import EnvironmentGroupBox from "./EnvironmentGroupBox";
+import ReinforcingBarGroupBox from "./ReinforcingBarGroupBox";
+import StructuralClassGroupBox from "./StructuralClassGroupBox";
+import DeviationGroupBox from "./DeviationGroupBox";
 
 
 export default function CoverSpreadsheet() {
@@ -54,16 +58,23 @@ export default function CoverSpreadsheet() {
                 <div>
                     <Grid container>
                         <Grid item xs={12} sm={6} md={6} lg={6}>
-                            <MaterialGroupBox concretes={concretes}
-                                              concrete={selectedConcrete}
-                                              concreteOnChange={handleConcreteOnChange}
-                                              aggregateSize={aggregateSize}
-                                              aggregateSizeOnChange={handleAggregateSizeOnChange}
-                                              aggregateSizeDisabled={aggregateSizeDisabled}
-                                              aggregateSizeDisabledOnChange={handleAggregateSizeDisabledOnChange}/>
+                            <EnvironmentGroupBox
+                            />
+                            <MaterialGroupBox
+                                concretes={concretes}
+                                concrete={selectedConcrete}
+                                concreteOnChange={handleConcreteOnChange}
+                                aggregateSize={aggregateSize}
+                                aggregateSizeOnChange={handleAggregateSizeOnChange}
+                                aggregateSizeDisabled={aggregateSizeDisabled}
+                                aggregateSizeDisabledOnChange={handleAggregateSizeDisabledOnChange}
+                            />
+                            <ReinforcingBarGroupBox
+                            />
                         </Grid>
                         <Grid item xs={12} sm={6} md={6} lg={6}>
-
+                            <StructuralClassGroupBox/>
+                            <DeviationGroupBox/>
                         </Grid>
                     </Grid>
                     <Box component="span" xs={12} md={12} lg={12}>

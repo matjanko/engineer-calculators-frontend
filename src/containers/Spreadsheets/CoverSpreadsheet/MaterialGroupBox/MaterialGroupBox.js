@@ -7,47 +7,36 @@ import Input from "@material-ui/core/Input";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Checkbox from "@material-ui/core/Checkbox";
 
-export default function MaterialGroupBox({concretes, concrete, concreteOnChange,
-                                             aggregateSize, aggregateSizeOnChange,
+export default function MaterialGroupBox({concretes, concrete, concreteOnChange, aggregateSize, aggregateSizeOnChange,
                                              aggregateSizeDisabled, aggregateSizeDisabledOnChange}) {
-
     return (
         <GroupBox header="Materiał">
             <Box width={1}>
                 <Box display='flex' alignItems='center' width={1} mb={2}>
-                    <Box display="flex" flexDirection="row" width={1}>
-                        <SpreadsheetLabel text='Klasa betonu'/>
-                    </Box>
-                    <Box display="flex" flexDirection="row-reverse">
-                        <Select onChange={concreteOnChange} value={concrete}>
-                            {concretes && concretes.map((item) => (
-                                <MenuItem key={item} value={item}>{item}</MenuItem>
-                            ))}
-                        </Select>
-                    </Box>
+                    <SpreadsheetLabel text='Klasa betonu'/>
+                    <Select onChange={concreteOnChange} value={concrete}>
+                        {concretes && concretes.map((item) => (
+                            <MenuItem key={item} value={item}>{item}</MenuItem>
+                        ))}
+                    </Select>
                 </Box>
                 <Box display='flex' alignItems='center' width={1}>
-                    <Box display="flex" flexDirection="row" width={1}>
-                        <SpreadsheetLabel text='Rozmiar kruszywa'/>
-                    </Box>
-                    <Box display="flex" flexDirection="row-reverse">
-                        <Input
-                            style={{width: '80px'}}
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <SpreadsheetLabel text={'mm'}/>
-                                </InputAdornment>
-                            }
-                            disabled={aggregateSizeDisabled}
-                            value={aggregateSize}
-                            onChange={aggregateSizeOnChange}
-                        />
-                        <Checkbox size="small" color="primary" checked={aggregateSizeDisabled}
-                                  onChange={aggregateSizeDisabledOnChange}/>
-                    </Box>
+                    <SpreadsheetLabel text='Rozmiar kruszywa'/>
+                    <Input
+                        style={{width: '80px'}}
+                        endAdornment={
+                            <InputAdornment position="end">
+                                <SpreadsheetLabel text={'mm'}/>
+                            </InputAdornment>
+                        }
+                        disabled={aggregateSizeDisabled}
+                        value={aggregateSize}
+                        onChange={aggregateSizeOnChange}
+                    />
+                    <Checkbox size="small" color="primary" checked={aggregateSizeDisabled}
+                              onChange={aggregateSizeDisabledOnChange}/>
                 </Box>
             </Box>
-
         </GroupBox>
     )
 }
