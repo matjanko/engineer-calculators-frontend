@@ -4,7 +4,7 @@ import MaterialGroupBox from "./MaterialGroupBox";
 import Button from "@material-ui/core/Button";
 import {Box} from "@material-ui/core";
 import SpreadsheetPage from "../../../components/SpreadsheetPage";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import SpreadsheetProgress from "../../../components/SpreadsheetProgress";
 
 
 export default function CoverSpreadsheet() {
@@ -36,7 +36,7 @@ export default function CoverSpreadsheet() {
 
     return (
         <SpreadsheetPage title={'Otulina wg PN-EN-1992-1-1'} hasError={hasError}>
-            {isLoading ? <CircularProgress/> :
+            {isLoading ? <SpreadsheetProgress/> :
                 <div>
                     <Grid container>
                         <Grid item xs={12} md={6} lg={6}>
