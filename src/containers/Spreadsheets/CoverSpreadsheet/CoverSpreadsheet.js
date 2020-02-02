@@ -39,12 +39,12 @@ export default function CoverSpreadsheet() {
             {isLoading ? <SpreadsheetProgress/> :
                 <div>
                     <Grid container>
-                        <Grid item xs={12} md={6} lg={6}>
+                        <Grid item xs={12} sm={6} md={6} lg={6}>
                             <MaterialGroupBox concretes={concretes}
                                               concrete={selectedConcrete}
                                               concreteOnChange={handleConcreteOnChange}/>
                         </Grid>
-                        <Grid item xs={12} md={6} lg={6}>
+                        <Grid item xs={12} sm={6} md={6} lg={6}>
 
                         </Grid>
                     </Grid>
