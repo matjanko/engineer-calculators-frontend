@@ -8,6 +8,11 @@ export default createMuiTheme({
            colorPrimary: {
                backgroundColor: 'rgb(38, 46, 59)',
            }
+       },
+       MuiSelect: {
+           select: {
+               minWidth: '100px'
+           }
        }
    } 
 });
