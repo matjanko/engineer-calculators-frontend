@@ -1,10 +1,15 @@
 import React from "react";
-import {Box, Select, GridList} from "@material-ui/core";
+import {Box, Select} from "@material-ui/core";
 import GroupBox from "../../../../components/GroupBox/GroupBox";
 import MenuItem from "@material-ui/core/MenuItem";
 import SpreadsheetLabel from "../../../../components/SpreadsheetLabel";
+import Input from "@material-ui/core/Input";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import Checkbox from "@material-ui/core/Checkbox";
 
-export default function MaterialGroupBox({concretes, concrete, concreteOnChange}) {
+export default function MaterialGroupBox({concretes, concrete, concreteOnChange,
+                                             aggregateSize, aggregateSizeOnChange,
+                                             aggregateSizeDisabled, aggregateSizeDisabledOnChange}) {
 
     return (
         <GroupBox header="Materiał">
@@ -26,7 +31,19 @@ export default function MaterialGroupBox({concretes, concrete, concreteOnChange}
                         <SpreadsheetLabel text='Rozmiar kruszywa'/>
                     </Box>
                     <Box display="flex" flexDirection="row-reverse">
-
+                        <Input
+                            style={{width: '80px'}}
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <SpreadsheetLabel text={'mm'}/>
+                                </InputAdornment>
+                            }
+                            disabled={aggregateSizeDisabled}
+                            value={aggregateSize}
+                            onChange={aggregateSizeOnChange}
+                        />
+                        <Checkbox size="small" color="primary" checked={aggregateSizeDisabled}
+                                  onChange={aggregateSizeDisabledOnChange}/>
                     </Box>
                 </Box>
             </Box>

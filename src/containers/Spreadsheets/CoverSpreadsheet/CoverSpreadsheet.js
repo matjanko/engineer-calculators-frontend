@@ -13,6 +13,8 @@ export default function CoverSpreadsheet() {
     const [concretes, setConcretes] = React.useState([]);
     const [isLoading, setLoading] = React.useState(true);
     const [selectedConcrete, setSelectedConcrete] = React.useState('');
+    const [aggregateSize, setAggregateSize] = React.useState(32);
+    const [aggregateSizeDisabled, setAggregateSizeDisabled] = React.useState(true);
 
     async function fetchConcretes() {
         const response = await fetch('/api/concretes/classes');
@@ -31,7 +33,19 @@ export default function CoverSpreadsheet() {
     };
 
     const handleOnClickButton = () => {
-        alert("Wybrano" + selectedConcrete)
+        alert("Wybrano beton " + selectedConcrete + " rozmiar kruszywa " + aggregateSize)
+    };
+
+    const handleAggregateSizeOnChange = (event) => {
+        const value = event.target.value;
+        if ((parseInt(value) || value === '') && value.length <= 2) {
+            setAggregateSize(event.target.value);
+        }
+    };
+
+    const handleAggregateSizeDisabledOnChange = (event) => {
+        setAggregateSizeDisabled(event.target.checked);
+        setAggregateSize(32);
     };
 
     return (
@@ -42,7 +56,11 @@ export default function CoverSpreadsheet() {
                         <Grid item xs={12} sm={6} md={6} lg={6}>
                             <MaterialGroupBox concretes={concretes}
                                               concrete={selectedConcrete}
-                                              concreteOnChange={handleConcreteOnChange}/>
+                                              concreteOnChange={handleConcreteOnChange}
+                                              aggregateSize={aggregateSize}
+                                              aggregateSizeOnChange={handleAggregateSizeOnChange}
+                                              aggregateSizeDisabled={aggregateSizeDisabled}
+                                              aggregateSizeDisabledOnChange={handleAggregateSizeDisabledOnChange}/>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6} lg={6}>
 
